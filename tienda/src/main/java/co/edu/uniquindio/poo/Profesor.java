@@ -1,5 +1,5 @@
 package co.edu.uniquindio.poo;
 
-public class Profesor {
+public class Profesor implements Cliente{
 
 }
