@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String cedula;
     private String edad;

@@ -13,7 +13,7 @@ public class Profesor extends Persona implements Cliente{
     public void setTipoProfesor(TipoProfesor tipoProfesor) {
         this.tipoProfesor = tipoProfesor;
     }
-    public double calcularDescuento(){
+    public double calcularPorcentajeDescuento(){
         double descuento;
         switch (tipoProfesor) {
             case SUPLENTE:

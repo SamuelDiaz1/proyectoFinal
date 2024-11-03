@@ -12,7 +12,7 @@ public class Administrador extends Empleado  {
     public int calcularSalario() {
         int salarioTotal;
         salarioTotal=salarioBase+bonificacion;
-        throw new UnsupportedOperationException("Unimplemented method 'calcularSalario'");
+        return salarioTotal;
     }
      
 }

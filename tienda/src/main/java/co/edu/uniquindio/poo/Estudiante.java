@@ -7,7 +7,7 @@ public class Estudiante extends Persona implements Cliente{
         super(nombre, cedula, edad);
         this.semestre = semestre;
     }
-    public double calcularDescuento(){
+    public double calcularPorcentajeDescuento(){
         double descuento;
         descuento =semestre*0.1; 
         return descuento;
