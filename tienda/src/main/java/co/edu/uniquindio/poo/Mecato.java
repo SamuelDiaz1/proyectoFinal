@@ -7,9 +7,9 @@ public class Mecato extends Producto{
 
     
 
-    public Mecato(String nombre, int precioVenta, int precioCompra, String codigoProducto, int stock,
+    public Mecato(String nombre, int precioVenta, String codigoProducto, int stock,
             LocalDate fechaCaducidad) {
-        super(nombre, precioVenta, precioCompra, codigoProducto, stock);
+        super(nombre, precioVenta, codigoProducto, stock);
         this.fechaCaducidad = fechaCaducidad;
     }
 
@@ -19,6 +19,11 @@ public class Mecato extends Producto{
 
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
+    }
+    @Override
+    public void mostrarInfoProducto() {
+        super.mostrarInfoProducto();
+        System.out.println("  -> Tipo: Mecato, se vence el "+fechaCaducidad );
     }
     
 }

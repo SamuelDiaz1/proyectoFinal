@@ -13,4 +13,5 @@ public class Cajero extends Empleado {
         return total;
     }
 
+
 }

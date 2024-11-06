@@ -3,15 +3,13 @@ package co.edu.uniquindio.poo;
 public class Producto {
     private String nombre;
     private int precioVenta;
-    private int precioCompra;
     private String codigoProducto;
-    private int stock;
-    public Producto(String nombre, int precioVenta, int precioCompra, String codigoProducto, int stock) {
+    private int cantidad;
+    public Producto(String nombre, int precioVenta, String codigoProducto, int cantidad) {
         this.nombre = nombre;
         this.precioVenta = precioVenta;
-        this.precioCompra = precioCompra;
         this.codigoProducto = codigoProducto;
-        this.stock = stock;
+        this.cantidad=cantidad;
     }
     public String getNombre() {
         return nombre;
@@ -25,23 +23,20 @@ public class Producto {
     public void setPrecioVenta(int precioVenta) {
         this.precioVenta = precioVenta;
     }
-    public int getPrecioCompra() {
-        return precioCompra;
-    }
-    public void setPrecioCompra(int precioCompra) {
-        this.precioCompra = precioCompra;
-    }
     public String getCodigoProducto() {
         return codigoProducto;
     }
     public void setCodigoProducto(String codigoProducto) {
         this.codigoProducto = codigoProducto;
     }
-    public int getStock() {
-        return stock;
+    public int getCantidad() {
+        return cantidad;
     }
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+    public void mostrarInfoProducto() {
+        System.out.println("Producto - Nombre: " + nombre + ", Precio: $" + precioVenta + ", Cantidad en stock: " + cantidad);
     }
     
 }
