@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Producto {
+public class Producto implements IProducto {
     private String nombre;
     private int precioVenta;
     private String codigoProducto;
@@ -11,30 +11,22 @@ public class Producto {
         this.codigoProducto = codigoProducto;
         this.cantidad=cantidad;
     }
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public int getPrecioVenta() {
-        return precioVenta;
-    }
-    public void setPrecioVenta(int precioVenta) {
-        this.precioVenta = precioVenta;
-    }
-    public String getCodigoProducto() {
-        return codigoProducto;
-    }
-    public void setCodigoProducto(String codigoProducto) {
-        this.codigoProducto = codigoProducto;
-    }
-    public int getCantidad() {
-        return cantidad;
-    }
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
+    public String getNombre() {return nombre;}
+    
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    
+    public int getPrecioVenta() {return precioVenta;}
+    
+    public void setPrecioVenta(int precioVenta) {this.precioVenta = precioVenta;}
+    
+    public String getCodigoProducto() {return codigoProducto;}
+    
+    public void setCodigoProducto(String codigoProducto) {this.codigoProducto = codigoProducto;}
+    
+    public int getCantidad() {return cantidad;}
+
+    public void setCantidad(int cantidad) {this.cantidad = cantidad;}
+    @Override
     public void mostrarInfoProducto() {
         System.out.println("Producto - Nombre: " + nombre + ", Precio: $" + precioVenta + ", Cantidad en stock: " + cantidad);
     }

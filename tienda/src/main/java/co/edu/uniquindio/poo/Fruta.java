@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Fruta extends Producto {
+public class Fruta extends Producto implements IProducto{
     private double peso;
 
     public Fruta(String nombre, int precioVenta,  String codigoProducto, int stock, double peso) {
