@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Producto implements IProducto {
+public class Producto {
     private String nombre;
     private int precioVenta;
     private String codigoProducto;
@@ -26,7 +26,7 @@ public class Producto implements IProducto {
     public int getCantidad() {return cantidad;}
 
     public void setCantidad(int cantidad) {this.cantidad = cantidad;}
-    @Override
+    
     public void mostrarInfoProducto() {
         System.out.println("Producto - Nombre: " + nombre + ", Precio: $" + precioVenta + ", Cantidad en stock: " + cantidad);
     }
