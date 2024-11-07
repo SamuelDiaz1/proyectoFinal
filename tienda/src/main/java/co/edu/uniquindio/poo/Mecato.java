@@ -12,11 +12,9 @@ public class Mecato extends Producto{
         super(nombre, precioVenta, codigoProducto, stock);
         this.fechaCaducidad = fechaCaducidad;
     }
-
     public LocalDate getFechaCaducidad() {
         return fechaCaducidad;
     }
-
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
