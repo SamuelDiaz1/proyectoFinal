@@ -30,5 +30,8 @@ public class Producto {
     public void mostrarInfoProducto() {
         System.out.println("Producto - Nombre: " + nombre + ", Precio: $" + precioVenta + ", Cantidad en stock: " + cantidad);
     }
+    public Producto clonar(){
+        return new Producto(this.nombre, this.precioVenta, this.codigoProducto, this.cantidad);
+    }
     
 }

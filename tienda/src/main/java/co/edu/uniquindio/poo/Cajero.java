@@ -11,4 +11,5 @@ public class Cajero extends Persona implements Empleado {
         int salarioTotal;
         salarioTotal=salarioBase+salarioBase*extra/100;
        return salarioTotal;
-    }}
+    }
+}

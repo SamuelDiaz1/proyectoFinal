@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Factura {
- private String idFactura;
+    private String idFactura;
     private List<Producto> productos;
 
 

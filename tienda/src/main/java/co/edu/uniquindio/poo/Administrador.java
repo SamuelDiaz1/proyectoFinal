@@ -1,15 +1,13 @@
 package co.edu.uniquindio.poo;
 
-public class Administrador extends Empleado  {
-    private int bonificacion;
-
-    public Administrador(String nombre, String cedula, String edad, int salarioBase, int bonificacion) {
-        super(nombre, cedula, edad, salarioBase);
-        this.bonificacion = bonificacion;
+public class Administrador extends Persona implements Empleado  {
+    
+    public Administrador(String nombre, String cedula, String edad) {
+        super(nombre, cedula, edad);
+        
     }
-
     @Override
-    public int calcularSalario() {
+    public int calcularSalario(int salarioBase, int bonificacion) {
         int salarioTotal;
         salarioTotal=salarioBase+bonificacion;
         return salarioTotal;

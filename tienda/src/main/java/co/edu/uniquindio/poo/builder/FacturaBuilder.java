@@ -1,21 +1,18 @@
 package co.edu.uniquindio.poo.builder;
 
 import co.edu.uniquindio.poo.Factura;
-import co.edu.uniquindio.poo.Producto;
 
 public class FacturaBuilder {
-    private Factura factura;
+    String idFactura;
 
-    public FacturaBuilder(String idFactura) {
-        factura = new Factura(idFactura);
+    public Factura build() {
+        return new Factura(this.idFactura);
     }
 
-    public FacturaBuilder agregarProducto(Producto producto, int cantidad) {
-        factura.agregarProducto(producto, cantidad);
+    public FacturaBuilder setIdFactura(String idFactura) {
+        this.idFactura = idFactura;
         return this;
     }
 
-    public Factura build() {
-        return factura;
-    }
+    
 }
