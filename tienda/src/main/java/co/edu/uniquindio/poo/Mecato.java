@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 import java.time.LocalDate;
 
-public class Mecato extends Producto{
+public class Mecato extends Producto {
     private LocalDate fechaCaducidad;
 
     

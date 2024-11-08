@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo;
 
-public class Refrigerado extends Producto{
+public class Refrigerado extends Producto {
     private String tempGuardado;
 
     public Refrigerado(String nombre, int precioVenta, String codigoProducto, int inventario,

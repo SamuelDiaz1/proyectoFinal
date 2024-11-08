@@ -1,17 +1,14 @@
 package co.edu.uniquindio.poo;
 
-public class Cajero extends Empleado {
-    int horasExtra;
-    public Cajero(String nombre, String cedula, String edad, int salarioBase,int horasExtra) {
-        super(nombre, cedula, edad, salarioBase);
-        this.horasExtra=horasExtra;
+public class Cajero extends Persona implements Empleado {
+    
+    public Cajero(String nombre, String cedula, String edad) {
+        super(nombre, cedula, edad);
+        
     }
     @Override
-    public int calcularSalario() {
-        int total;
-        total=salarioBase+horasExtra;
-        return total;
-    }
-
-
-}
+    public int calcularSalario(int salarioBase, int extra) {
+        int salarioTotal;
+        salarioTotal=salarioBase+salarioBase*extra/100;
+       return salarioTotal;
+    }}
