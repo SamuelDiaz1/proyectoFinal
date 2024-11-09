@@ -7,8 +7,6 @@ public class Factura {
     private String idFactura;
     private List<Producto> productos;
 
-
-
     public Factura(String idFactura) {
         this.idFactura = idFactura;
         this.productos = new ArrayList<>();
@@ -17,7 +15,7 @@ public class Factura {
     public String getIdFactura() {
         return idFactura;
     }
-    public void agregarProducto(Producto producto, int cantidad) {
+    public void agregarProductoAFactura(Producto producto, int cantidad) {
         if (cantidad > producto.getCantidad()) {
             System.out.println("No hay suficiente cantidad de " + producto.getNombre() + " en el inventario.");
         }
@@ -35,17 +33,12 @@ public class Factura {
         }
         return total;
     }
-
-
     public void mostrarFactura() {
         System.out.println("Factura ID: " + idFactura);
         System.out.println("Productos:");
         for (Producto producto : productos) {
-            System.out.println("- " + producto.getNombre() + " x " + producto.getCantidad() + " = $" + (producto.getPrecioVenta() * producto.getCantidad()));
+            System.out.println("- " + producto.getNombre() + " x " + producto.getCantidad() + " = $" + (calcularTotal()));
         }
         System.out.println("Total: $" + calcularTotal());
-    }
-
-
-    
+    } 
 }
