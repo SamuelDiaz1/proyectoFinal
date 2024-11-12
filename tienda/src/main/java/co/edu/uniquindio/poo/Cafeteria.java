@@ -78,7 +78,16 @@ public class Cafeteria {
         cajeroHandler.setNextHandler(gerenteHandler);
         this.descuentoHandler = cajeroHandler;
     }
-        public void calcularDescuentoCliente(Cliente cliente) {
+    public void agregarProductoAFactura(Factura factura, String nombreProducto, int cantidad) {
+        Producto producto = stock.buscarProducto(nombreProducto);
+        if (producto != null) {
+            factura.agregarProductoAFactura(producto, cantidad);
+        } else {
+            System.out.println("Producto no encontrado en el inventario.");
+        }
+    }
+    
+    public void calcularDescuentoCliente(Cliente cliente) {
         double descuento = 0.0;
 
         if (cliente instanceof Estudiante) {
