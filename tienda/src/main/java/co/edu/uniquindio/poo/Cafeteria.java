@@ -56,8 +56,8 @@ public class Cafeteria {
         empleados.add(empleado);
         System.out.println(tipo + " " + nombre + " ha sido agregado a la cafetería.");
     }
-    public void agregarCliente(String tipo, String nombre, String cedula, String edad, double parametro) {
-        Cliente cliente= clienteFactory.crearCliente(tipo, nombre, cedula, edad, parametro);
+    public void agregarCliente( String nombre, String cedula, String edad, String tipoCliente) {
+        Cliente cliente= clienteFactory.crearCliente( nombre, cedula, edad, tipoCliente);
         clientes.add(cliente);
     }
     public void mostrarInventario() {
@@ -87,17 +87,11 @@ public class Cafeteria {
         }
     }
     
-    public void calcularDescuentoCliente(Cliente cliente) {
+    public double calcularDescuentoCliente(Cliente cliente) {
         double descuento = 0.0;
-
-        if (cliente instanceof Estudiante) {
-            descuento = ((Estudiante) cliente).calcularPorcentajeDescuento();
-        } else if (cliente instanceof Profesor) {
-            descuento = ((Profesor) cliente).calcularPorcentajeDescuento();
-        }
-
+        descuento =cliente.calcularPorcentajeDescuento();
         System.out.println("Descuento calculado para " + cliente.getNombre() + ": " + descuento + "%");
-        // Pasar el descuento calculado al siguiente manejador (cadena de responsabilidad)
         descuentoHandler.aplicarDescuento(descuento);
+        return  descuento;
     }
 }

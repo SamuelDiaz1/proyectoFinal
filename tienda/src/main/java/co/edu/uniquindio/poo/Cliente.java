@@ -1,7 +1,5 @@
 package co.edu.uniquindio.poo;
 
-public interface Cliente {
-    double calcularPorcentajeDescuento();
+public class Cliente {
 
-    String getNombre();
 }
