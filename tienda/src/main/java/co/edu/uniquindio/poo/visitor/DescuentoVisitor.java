@@ -6,7 +6,11 @@ import co.edu.uniquindio.poo.Refrigerado;
 
 public class DescuentoVisitor implements FacturaVisitor{
     private double descuentoTotal;
+    
 
+    public DescuentoVisitor(double descuentoTotal) {
+        this.descuentoTotal = descuentoTotal;
+    }
     public double getDescuentoTotal() {
         return descuentoTotal;
     }

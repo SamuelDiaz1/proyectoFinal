@@ -12,12 +12,12 @@ public class Stock {
     }
 
     // Método para agregar un producto al inventario
-    public void agregarProducto(Producto producto) {
+    public void agregarProductoAStock(Producto producto) {
         inventario.add(producto);
     }
 
     // Método para buscar un producto por nombre
-    private Producto buscarProducto(String nombreProducto) {
+    public Producto buscarProducto(String nombreProducto) {
         for (Producto producto : inventario) {
             if (producto.getNombre().equalsIgnoreCase(nombreProducto)) {
                 return producto;
@@ -49,6 +49,7 @@ public class Stock {
             }
         }
     }
+    
 
     // Método para mostrar todo el inventario
     public void mostrarInventario() {

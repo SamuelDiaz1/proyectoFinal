@@ -3,6 +3,8 @@ package co.edu.uniquindio.poo;
 import java.util.ArrayList;
 import java.util.List;
 
+import co.edu.uniquindio.poo.visitor.DescuentoVisitor;
+
 public class Factura {
     private String idFactura;
     private List<Producto> productos;
@@ -12,6 +14,11 @@ public class Factura {
         this.productos = new ArrayList<>();
     
     }
+    
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
     public String getIdFactura() {
         return idFactura;
     }
@@ -25,7 +32,12 @@ public class Factura {
         productos.add(productoFacturado);
         System.out.println("Producto agregado: " + producto.getNombre() + " x " + cantidad);
     }
-
+    public void aplicarDescuento(DescuentoVisitor descuento) {
+        for (Producto producto : productos) {
+            producto.accept(descuento);
+        }
+        System.out.println("Descuento total en la factura: $" + descuento.getDescuentoTotal());
+    }
     public double calcularTotal() {
        double total = 0.0;  
         for (Producto producto : productos) {

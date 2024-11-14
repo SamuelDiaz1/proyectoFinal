@@ -1,5 +1,7 @@
 package co.edu.uniquindio.poo;
 
+import co.edu.uniquindio.poo.visitor.FacturaVisitor;
+
 public class Producto {
     private String nombre;
     private int precioVenta;
@@ -33,5 +35,7 @@ public class Producto {
     public Producto clonar(){
         return new Producto(this.nombre, this.precioVenta, this.codigoProducto, this.cantidad);
     }
-    
+     public void accept(FacturaVisitor visitor) {
+        // Implementado en subclases
+    }
 }
