@@ -15,12 +15,12 @@ import co.edu.uniquindio.poo.visitor.DescuentoVisitor;
 public class Cafeteria {
     private String nombre;
     private String nit;
-    private Stock stock;
+    Stock stock;
     private List<Empleado> empleados;
     private EmpleadoFactory empleadoFactory;
-    private List<Cliente> clientes;
+    List<Cliente> clientes;
     private ClienteFactory clienteFactory;
-    private List<Factura> facturas;
+    List<Factura> facturas;
     private DescuentoHandler descuentoHandler;
      // Constructor que inicializa los atributos de la cafetería
     public Cafeteria(String nombre, String nit) {

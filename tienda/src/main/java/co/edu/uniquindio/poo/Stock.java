@@ -1,11 +1,10 @@
 package co.edu.uniquindio.poo;
 
-
 import java.util.LinkedList;
 
 public class Stock {
 
-        private LinkedList<Producto> inventario;
+    private LinkedList<Producto> inventario;
 
     public Stock() {
         this.inventario = new LinkedList<>();
@@ -19,7 +18,7 @@ public class Stock {
     // Método para buscar un producto por nombre
     public Producto buscarProducto(String nombreProducto) {
         for (Producto producto : inventario) {
-            if (producto.getNombre().equalsIgnoreCase( nombreProducto)) {
+            if (producto.getNombre().equalsIgnoreCase(nombreProducto)) {
                 return producto;
             }
         }
@@ -36,6 +35,14 @@ public class Stock {
         }
     }
 
+    // Método para mostrar todo el inventario
+    public void mostrarInventario() {
+        System.out.println("Inventario actual:");
+        for (Producto producto : inventario) {
+            producto.mostrarInfoProducto();
+        }
+    }
+
     // Método para reducir la cantidad de un producto en el inventario
     public void reducirStock(String nombreProducto, int cantidad) {
         Producto producto = buscarProducto(nombreProducto);
@@ -45,18 +52,10 @@ public class Stock {
                 producto.setCantidad(nuevaCantidad);
                 System.out.println("Reducida cantidad de " + nombreProducto + " en " + cantidad + " unidades.");
             } else {
-                System.out.println("No hay suficiente cantidad de " + nombreProducto + " para reducir.");
+                throw new IllegalArgumentException(
+                        "No hay suficiente cantidad de " + nombreProducto + " para reducir.");
             }
         }
     }
-    
 
-    // Método para mostrar todo el inventario
-    public void mostrarInventario() {
-        System.out.println("Inventario actual:");
-        for (Producto producto : inventario) {
-            producto.mostrarInfoProducto();
-        }
-    }
 }
-

@@ -59,4 +59,6 @@ public class DescuentoVisitor implements FacturaVisitor{
         System.out.println((descuentoTotal += descuento) + "Descuento aplicado en " + fruta.getNombre() + ": $" + descuento);
     }
 
+    
+
 }
