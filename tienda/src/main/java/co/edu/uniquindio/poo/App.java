@@ -35,4 +35,6 @@ public class App {
         factura.mostrarFactura();
         cafeteria.mostrarInventario();
     }
+
+    
 }
