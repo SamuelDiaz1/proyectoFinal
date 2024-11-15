@@ -14,6 +14,10 @@ public class CafeteriaTest {
 
     }
 
+    /**
+     * Prueba que verifica el cambio de nombre de la cafetería.
+     * Se espera que el nombre de la cafetería se actualice correctamente.
+     */
     @Test
     public void testSetNombre() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
@@ -21,12 +25,20 @@ public class CafeteriaTest {
         assertEquals("Café de la Esquina", cafeteria.getNombre());
     }
 
+    /**
+     * Prueba que verifica la obtención del NIT de la cafetería.
+     * Se espera que el NIT de la cafetería se obtenga correctamente.
+     */
     @Test
     public void testGetNit() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
         assertEquals("12345", cafeteria.getNit());
     }
 
+    /**
+     * Prueba que verifica el cambio de NIT de la cafetería.
+     * Se espera que el NIT de la cafetería se actualice correctamente.
+     */
     @Test
     public void testSetNit() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
@@ -34,6 +46,10 @@ public class CafeteriaTest {
         assertEquals("67890", cafeteria.getNit());
     }
 
+    /**
+     * Prueba que verifica la adición de un producto al inventario de la cafetería.
+     * Se espera que el producto se agregue correctamente al inventario.
+     */
     @Test
     public void testAgregarProductoInventario() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
@@ -42,6 +58,10 @@ public class CafeteriaTest {
         assertTrue(cafeteria.stock.buscarProducto("Capuchino") != null);
     }
 
+    /**
+     * Prueba que verifica la adición de un empleado a la cafetería.
+     * Se espera que el empleado se agregue correctamente a la lista de empleados.
+     */
     @Test
     public void testAgregarEmpleado() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
@@ -49,6 +69,10 @@ public class CafeteriaTest {
         assertEquals(1, cafeteria.getEmpleados().size());
     }
 
+    /**
+     * Prueba que verifica la adición de un cliente a la cafetería.
+     * Se espera que el cliente se agregue correctamente a la lista de clientes.
+     */
     @Test
     public void testAgregarCliente() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
@@ -56,6 +80,10 @@ public class CafeteriaTest {
         assertEquals(1, cafeteria.clientes.size());
     }
 
+    /**
+     * Prueba que verifica la creación de una factura en la cafetería.
+     * Se espera que la factura se cree correctamente.
+     */
     @Test
     public void testCrearFactura() {
         Cafeteria cafeteria = new Cafeteria("Café Central", "12345");
