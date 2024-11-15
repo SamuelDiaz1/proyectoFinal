@@ -19,7 +19,7 @@ public class Stock {
     // Método para buscar un producto por nombre
     public Producto buscarProducto(String nombreProducto) {
         for (Producto producto : inventario) {
-            if (producto.getNombre().equalsIgnoreCase(nombreProducto)) {
+            if (producto.getNombre().equalsIgnoreCase( nombreProducto)) {
                 return producto;
             }
         }

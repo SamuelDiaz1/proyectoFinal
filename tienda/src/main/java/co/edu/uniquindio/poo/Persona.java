@@ -10,24 +10,17 @@ public class Persona {
         this.cedula = cedula;
         this.edad = edad;
     }
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public String getCedula() {
-        return cedula;
-    }
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-    public String getEdad() {
-        return edad;
-    }
-    public void setEdad(String edad) {
-        this.edad = edad;
-    }
+    //Getter y setter del nombre de la persona
+    public String getNombre() {return nombre;}
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    
+    //Getter y setter de la cedula de la persona
+    public String getCedula() {return cedula;}
+    public void setCedula(String cedula) {this.cedula = cedula;}
+
+    //Getter y setter de la cedula de la persona
+    public String getEdad() {return edad;}
+    public void setEdad(String edad) {this.edad = edad;}
     
 
 }
